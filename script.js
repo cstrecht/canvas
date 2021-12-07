@@ -1,14 +1,15 @@
 let actualColor = "black";
 let drawing = false;
 
-let board = document.querySelector("#canvas"); // selecting the drawing board
-let context = board.getContext("2d"); // this variable will give rendering in 2D to the <canvas> element
-// When I click and hold (mousedown), the drawing mode will be activated!
+let board = document.querySelector("#canvas");
+let context = board.getContext("2d");
+
 // Events:
 document.querySelectorAll(".colors .color").forEach((item) => {
   item.addEventListener("click", colorClick);
 });
 board.addEventListener("mousedown", mouseDown);
+board.addEventListener("mouseup", mouseUp);
 // Functions:
 function colorClick(e) {
   let color = e.target.getAttribute("id");
@@ -19,6 +20,9 @@ function colorClick(e) {
   e.target.classList.add("active");
 }
 function mouseDown() {
-  console.log("clicked");
   drawing = true;
+}
+function mouseUp() {
+  console.log("already clicked");
+  drawing = false;
 }
