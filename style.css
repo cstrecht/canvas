@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Indie Flower", cursive;
+  background-color: rgb(79, 141, 182);
+  color: aliceblue;
+}
+h1 {
+  margin-top: 3px;
+  margin-bottom: 1px;
+  font-size: 55px;
+  text-shadow: 3px 3px 4px black;
+  letter-spacing: 3px;
+}
+h2 {
+  text-shadow: 3px 3px 4px black;
+  letter-spacing: 3px;
+}
+canvas {
+  background-color: rgb(72, 117, 72);
+  margin-right: 17px;
+  cursor: crosshair;
+  border-radius: 20px;
+  border: 5px solid rgb(128, 50, 26);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.color {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: 1px solid white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 10fr 0.4fr;
+  gap: 0px 5px;
+  margin-bottom: 20px;
+}
+button {
+  background-color: #0b5091;
+  border: none;
+  color: white;
+  padding: 10px 40px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 40px;
+  opacity: 0.5;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Indie Flower", cursive;
+  font-size: 23px;
+  letter-spacing: 3px;
+}
+button:hover {
+  opacity: 1;
+  padding: 12px 42px;
+  font-size: 25px;
+}
