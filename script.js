@@ -1,4 +1,4 @@
-let actualColor = "black";
+let currentColor = "black";
 let drawing = false;
 let mouseX = 0;
 let mouseY = 0;
@@ -16,8 +16,9 @@ board.addEventListener("mouseup", mouseUp);
 
 // Functions:
 function colorClick(e) {
-  let myColor = e.target.getAttribute("id");
-  actualColor = myColor;
+  let color = e.target.getAttribute("id");
+  console.log("color: " + color);
+  currentColor = color;
 
   document.querySelector(".color.active").classList.remove("active");
   e.target.classList.add("active");
@@ -41,14 +42,14 @@ function draw(x, y) {
 
   context.beginPath();
   context.lineWidth = 8;
-  if (actualColor === "rgb(72, 117, 72)") {
+  if (currentColor === "rgb(72, 117, 72)") {
     context.lineWidth = 50;
   }
   context.lineJoin = "round";
   context.moveTo(mouseX, mouseY);
   context.lineTo(pointX, pointY);
   context.closePath();
-  context.strokeStyle = actualColor;
+  context.strokeStyle = currentColor;
   context.stroke();
 
   mouseX = pointX;
