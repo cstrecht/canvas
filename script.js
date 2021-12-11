@@ -1,4 +1,4 @@
-let actualColor = "black";
+let currentColor = "black";
 let drawing = false;
 
 let board = document.querySelector("#canvas");
@@ -14,7 +14,7 @@ board.addEventListener("mouseup", mouseUp);
 function colorClick(e) {
   let color = e.target.getAttribute("id");
   console.log("color: " + color);
-  actualColor = color;
+  currentColor = color;
 
   document.querySelector(".color.active").classList.remove("active");
   e.target.classList.add("active");
