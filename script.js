@@ -10,7 +10,7 @@ document.querySelectorAll(".colors .color").forEach((item) => {
 function colorClick(e) {
   let color = e.target.getAttribute("id");
   console.log("color: " + color);
-  actualColor = color;
+  currentColor = color;
 
   // remove active class from black, and put the active class in other color:
   document.querySelector(".color.active").classList.remove("active");
