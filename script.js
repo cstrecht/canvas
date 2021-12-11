@@ -1,5 +1,5 @@
 // Select a color, and save that choice:
-let actualColor = "black"; // start always w/ black color
+let currentColor = "black"; // start always w/ black color
 
 // Events:
 document.querySelectorAll(".colors .color").forEach((item) => {
