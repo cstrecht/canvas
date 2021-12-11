@@ -13,6 +13,7 @@ document.querySelectorAll(".colors .color").forEach((item) => {
 board.addEventListener("mousedown", mouseDown);
 board.addEventListener("mousemove", mouseMove);
 board.addEventListener("mouseup", mouseUp);
+
 // Functions:
 function colorClick(e) {
   let color = e.target.getAttribute("id");
@@ -36,11 +37,9 @@ function mouseUp() {
   drawing = false;
 }
 function draw(x, y) {
-  // get the inicial position
   let pointX = x - board.offsetLeft;
   let pointY = y - board.offsetTop;
 
-  // draw:
   context.beginPath();
   context.lineWidth = 8;
   if (currentColor === "rgb(72, 117, 72)") {
@@ -53,7 +52,6 @@ function draw(x, y) {
   context.strokeStyle = currentColor;
   context.stroke();
 
-  // save the position
   mouseX = pointX;
   mouseY = pointY;
 }
